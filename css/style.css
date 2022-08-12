@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+/* costom prop */
+:root{
+    --bady_bg:#E7E7E7;
+    --green:#4DC490;
+    --blue:#3A2BF8; 
+    --red:#F03535;
+    --text_colors:#000;
+}
 /* globol */
 html{
     box-sizing: border-box;
@@ -16,10 +25,11 @@ body{
     height: 100%;
     padding: 0;
     margin: 0;
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #fff;
-    color: #222;
+    background-color: var(--bady_bg);
+    color:var(--text_color);
 }
 img{
     max-width: 100%;
@@ -30,9 +40,9 @@ img{
 
 .conteiner{
     width: 100%;
-    max-width: 1200px;
-    padding-left: 50px;
-    padding-right: 50px;
+    max-width: 1192px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -40,4 +50,136 @@ img{
 /* main_content */
 .main_content{
     flex-grow: 1;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* hero */
+.intro_page {
+    display: flex;
+  
+}
+.hero {
+    --text_color:#fff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 570px;
+    border-radius: 20px;
+    overflow: hidden;
+    color: var(--text_color);
+    
+}
+.hero_main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 55px 60px;
+    flex-grow: 1;   
+    background:#555 url(../img/Rectangle6.jpg) no-repeat center/cover ;
+}
+.hero_badge {
+    padding: 5px 15px;
+    border: 1px solid var(--text_color);
+    border-radius: 41px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 60px;
+}
+.hero_heading {
+    margin-top: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 46px;
+    padding-right: 30px;
+}
+.hero_text {
+    margin-top: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+.hero_buttom {
+    display: inline-block;
+    padding: 28px;
+    background:var(--green);
+    text-align: center;
+}
+
+/* signuo_form */
+.signup {
+    width: 100%;
+    max-width: 578px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+    margin-left: 12px;
+    padding: 55px 60px 40px;
+
+}
+.signup_form_heading {
+    margin-top: 0;
+    margin-bottom: 65px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 33px;
+    line-height: 42px;
+}
+.signup_form_fields{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 65px;
+}
+.signup_form_field {
+    padding-top: 15px;
+    padding-bottom: 14px;
+    border: 0;
+    border-bottom: 1px solid #555;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #555555;
+    outline:none;
+    transition: .1s all;
+}
+.signup_form_field:focus{
+    border-color: #000;
+    color: #000;
+    font-weight: 600;
+}
+.signup_form_field:not(:last-child){
+    margin-bottom: 20px;
+}
+.signup_from_submit {
+    display: block;
+    border: 0;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    width: 100%;
+    padding: 20px;
+    background:var(--blue);
+    color:#fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.signup_form_notice {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+}
+.signup_form_notice_link {
+    color: var(--red);
+    font-weight: 500;
 }
